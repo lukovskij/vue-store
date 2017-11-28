@@ -6,10 +6,14 @@ import router from './router';
 
 Vue.config.productionTip = false;
 
+Vue.component('product', {
+  template : `<h1> I am global component </h1>`
+})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   template: '<App/>',
-  components: { App },
+  components: {App},
 });

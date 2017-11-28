@@ -2,12 +2,19 @@
   <div id="app">
     <img src="./assets/logo.png">
     <router-view/>
+    <input type="text" v-model="href">
+    <a :href="href">{{href}}</a>
   </div>
 </template>
 
 <script>
 export default {
   name: 'app',
+  data() {
+    return {
+      href : ''
+    }
+  }
 };
 </script>
 
